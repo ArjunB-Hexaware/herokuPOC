@@ -20,7 +20,7 @@ var options = {
 
    app.post('/',function(req,res){
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
-if(req.body.result.metadata.intentName=='LeaveBalance'){
+if(req.body.queryResult.intent.displayName=='LeaveBalance'){
   res.json({
         "conversationToken": "",
         "expectUserResponse": true,
@@ -44,7 +44,7 @@ if(req.body.result.metadata.intentName=='LeaveBalance'){
 
 
 
-}else if (req.body.result.metadata.intentName=='Default Welcome Intent'){
+}else if (req.body.queryResult.intent.displayName =='Default Welcome Intent'){
   var apiagentreq=req.body.result&&req.body.result.parameters;
   var resagent='hello Welcome...would you like to book tickets?';
 console.log('request are'+apiagentreq);
