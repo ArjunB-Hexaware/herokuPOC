@@ -46,38 +46,7 @@ if(req.body.queryResult.intent.displayName=='LeaveBalance'){
             "title": "or this"
           }
         ]
-      },
-      "systemIntent": {
-        "data": {
-          "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
-          "listSelect": {
-            "items": [
-              {
-                "optionInfo": {
-                  "key": "key1",
-                  "synonyms": [
-                    "key one"
-                  ]
-                },
-                "title": "must not be empty"
-              },
-              {
-                "optionInfo": {
-                  "key": "key2",
-                  "synonyms": [
-                    "key two"
-                  ]
-                },
-                "title": "must not be empty, but unique, for some reason"
-              }
-            ]
-          }
-        },
-        "intent": "actions.intent.OPTION"
-      }
-    }
-  }
-});
+      });
 
 
 
