@@ -13,7 +13,8 @@ app.use(bodyParser.json());
    app.post('/',function(req,res){
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
 if(req.body.queryResult.intent.displayName=='LeaveBalance'){
-  res.json({"messages": [
+    console.log("tester");
+  res.send({"messages": [
         {
     "displayText": "Text response",
     "platform": "google",
@@ -21,6 +22,9 @@ if(req.body.queryResult.intent.displayName=='LeaveBalance'){
     "type": "simple_response"
   }
 ]});
+
+
+
 }
 
 });
