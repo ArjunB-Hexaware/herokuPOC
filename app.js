@@ -14,9 +14,10 @@ app.use(bodyParser.json());
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
 
     console.log("tester");
-res.send({"messages": [
+      if(req.body.fulfillment.speech == "date"){
+      res.send({"messages": [
     {
-      "displayText": "Text response",
+      "displayText": "Date-time",
       "platform": "google",
       "textToSpeech": "Audio response",
       "type": "simple_response"
@@ -62,6 +63,111 @@ res.send({"messages": [
       }
        
   ]});
+      }else{
+      if(req.body.fulfillment.speech == "number"){
+      res.send({"messages": [
+    {
+      "displayText": "Number",
+      "platform": "google",
+      "textToSpeech": "Audio response",
+      "type": "simple_response"
+    },  {
+      "items": [
+        {
+         
+          "optionInfo": {
+            "key": "itemOne",
+            "synonyms": [
+              "thing one",
+              "object one"
+            ]
+          },
+          "title": "Item One"
+        },
+        {
+        
+          "optionInfo": {
+            "key": "itemTwo",
+            "synonyms": [
+              "thing two",
+              "object two"
+            ]
+          },
+          "title": "Item Two"
+        }
+      ],
+      "platform": "google",
+      "title": "Title",
+      "type": "list_card"
+    },  {
+        "platform": "google",
+        "suggestions": [
+          {
+            "title": "Chip One"
+          },
+          {
+            "title": "Chip Two"
+          }
+        ],
+        "type": "suggestion_chips"
+      }
+       
+  ]});
+      }else{
+          if(req.body.fulfillment.speech == "success"){
+            res.send({"messages": [
+                {
+                  "displayText": "I am success",
+                  "platform": "google",
+                  "textToSpeech": "Audio response",
+                  "type": "simple_response"
+                },  {
+                  "items": [
+                    {
+                     
+                      "optionInfo": {
+                        "key": "itemOne",
+                        "synonyms": [
+                          "thing one",
+                          "object one"
+                        ]
+                      },
+                      "title": "Item One"
+                    },
+                    {
+                    
+                      "optionInfo": {
+                        "key": "itemTwo",
+                        "synonyms": [
+                          "thing two",
+                          "object two"
+                        ]
+                      },
+                      "title": "Item Two"
+                    }
+                  ],
+                  "platform": "google",
+                  "title": "Title",
+                  "type": "list_card"
+                },  {
+                    "platform": "google",
+                    "suggestions": [
+                      {
+                        "title": "Chip One"
+                      },
+                      {
+                        "title": "Chip Two"
+                      }
+                    ],
+                    "type": "suggestion_chips"
+                  }
+                   
+              ]});
+            
+          }
+      }
+      }
+
 
 
 
