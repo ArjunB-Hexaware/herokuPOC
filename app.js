@@ -22,6 +22,12 @@ var options = {
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
 if(req.body.queryResult.intent.displayName=='LeaveBalance'){
   res.json({"messages": [
+        {
+    "displayText": "Text response",
+    "platform": "google",
+    "textToSpeech": "Audio response",
+    "type": "simple_response"
+  },
   {
     "platform": "google",
     "suggestions": [
