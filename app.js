@@ -9,14 +9,6 @@ var portC = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-var options = {
-    sessionId: '567yh8'
-};
-
-
-
-
-
 
    app.post('/',function(req,res){
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
@@ -27,23 +19,8 @@ if(req.body.queryResult.intent.displayName=='LeaveBalance'){
     "platform": "google",
     "textToSpeech": "Audio response",
     "type": "simple_response"
-  },
-  {
-    "platform": "google",
-    "suggestions": [
-      {
-        "title": "Chip One"
-      },
-      {
-        "title": "Chip Two"
-      }
-    ],
-    "type": "suggestion_chips"
   }
 ]});
-
-
-
 }
 
 });
