@@ -14,7 +14,7 @@ app.use(bodyParser.json());
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
 
     console.log("tester");
-      if(req.body.fulfillment.speech == "date"){
+      if(req.body.result.fulfillment.speech == "date"){
       res.send({"messages": [
     {
       "displayText": "Date-time",
@@ -64,7 +64,7 @@ app.use(bodyParser.json());
        
   ]});
       }else{
-      if(req.body.fulfillment.speech == "number"){
+      if(req.body.result.fulfillment.speech == "number"){
       res.send({"messages": [
     {
       "displayText": "Number",
@@ -114,7 +114,7 @@ app.use(bodyParser.json());
        
   ]});
       }else{
-          if(req.body.fulfillment.speech == "success"){
+          if(req.body.result.fulfillment.speech == "success"){
             res.send({"messages": [
                 {
                   "displayText": "I am success",
