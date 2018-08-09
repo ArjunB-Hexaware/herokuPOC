@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 
    app.post('/',function(req,res){
-      console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
+      console.log('REQUESTTTTT:::'+req.body.result.fulfillment.speech);
 
     console.log("tester");
       if(req.body.result.fulfillment.speech == "date"){
