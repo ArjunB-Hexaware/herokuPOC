@@ -14,14 +14,10 @@ app.use(bodyParser.json());
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
 if(req.body.queryResult.intent.displayName=='LeaveBalance'){
     console.log("tester");
-  res.send({"messages": [
-        {
-    "displayText": "Text response",
-    "platform": "google",
-    "textToSpeech": "Audio response",
-    "type": "simple_response"
-  }
-]});
+  res.send({
+    speech:"Please enter a valid incident number",
+    displayText:"Please enter a valid incident number"
+  });
 
 
 
