@@ -14,43 +14,54 @@ app.use(bodyParser.json());
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
 
     console.log("tester");
-  res.send({"messages": [
-  {
-    "displayText": "Text response",
-    "platform": "google",
-    "textToSpeech": "Audio response",
-    "type": "simple_response"
-  },  {
-    "items": [
-      {
-       
-        "optionInfo": {
-          "key": "itemOne",
-          "synonyms": [
-            "thing one",
-            "object one"
-          ]
+res.send({"messages": [
+    {
+      "displayText": "Text response",
+      "platform": "google",
+      "textToSpeech": "Audio response",
+      "type": "simple_response"
+    },  {
+      "items": [
+        {
+         
+          "optionInfo": {
+            "key": "itemOne",
+            "synonyms": [
+              "thing one",
+              "object one"
+            ]
+          },
+          "title": "Item One"
         },
-        "title": "Item One"
-      },
-      {
-      
-        "optionInfo": {
-          "key": "itemTwo",
-          "synonyms": [
-            "thing two",
-            "object two"
-          ]
-        },
-        "title": "Item Two"
+        {
+        
+          "optionInfo": {
+            "key": "itemTwo",
+            "synonyms": [
+              "thing two",
+              "object two"
+            ]
+          },
+          "title": "Item Two"
+        }
+      ],
+      "platform": "google",
+      "title": "Title",
+      "type": "list_card"
+    },  {
+        "platform": "google",
+        "suggestions": [
+          {
+            "title": "Chip One"
+          },
+          {
+            "title": "Chip Two"
+          }
+        ],
+        "type": "suggestion_chips"
       }
-    ],
-    "platform": "google",
-    "title": "Title",
-    "type": "list_card"
-  }
-     
-]});
+       
+  ]});
 
 
 
