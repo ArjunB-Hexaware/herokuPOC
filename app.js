@@ -22,44 +22,65 @@ var options = {
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
 if(req.body.queryResult.intent.displayName=='LeaveBalance'){
   res.json({
-        "conversationToken": "",
-        "expectUserResponse": true,
-        "expectedInputs": [{
-            "inputPrompt": {
-                "richInitialPrompt": {
-                    "items": [{
-                        "simpleResponse": {
-                            "textToSpeech": "test",
-                            "displayText": "testing"
-                        }
-                    }],
-                    "suggestions": []
-                }
-            },
-            "possibleIntents": [{
-                "intent": "actions.intent.TEXT"
-            }]
-        }]
-    });
+  "platform": "google",
+  "type": "custom_payload",
+  "payload": {
+    "google": {
+      "expectUserResponse": true,
+      "isSsml": false,
+      "noInputPrompts": [],
+      "richResponse": {
+        "items": [
+          {
+            "simpleResponse": {
+              "displayText": "hi",
+              "textToSpeech": "hello"
+            }
+          }
+        ],
+        "suggestions": [
+          {
+            "title": "Say this"
+          },
+          {
+            "title": "or this"
+          }
+        ]
+      },
+      "systemIntent": {
+        "data": {
+          "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
+          "listSelect": {
+            "items": [
+              {
+                "optionInfo": {
+                  "key": "key1",
+                  "synonyms": [
+                    "key one"
+                  ]
+                },
+                "title": "must not be empty"
+              },
+              {
+                "optionInfo": {
+                  "key": "key2",
+                  "synonyms": [
+                    "key two"
+                  ]
+                },
+                "title": "must not be empty, but unique, for some reason"
+              }
+            ]
+          }
+        },
+        "intent": "actions.intent.OPTION"
+      }
+    }
+  }
+});
 
 
 
-}else if (req.body.queryResult.intent.displayName =='Default Welcome Intent'){
-  var apiagentreq=req.body.result&&req.body.result.parameters;
-  var resagent='hello Welcome...would you like to book tickets?';
-console.log('request are'+apiagentreq);
-  return res.json({
-    speech:resagent,
-    displayText: resagent,
-    source:'hello ticket book'
-  });
-
-}
-else{
-  return res.json({
-    speech:'HEY Sorry, cannot determine',
-    displayText:'HEY Sorry, we cant get you'
-  })
 }
 
 });
