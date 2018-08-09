@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
    app.post('/',function(req,res){
       console.log('REQUESTTTTT:::'+JSON.stringify(req.body));
-if(req.body.queryResult.intent.displayName=='LeaveBalance'){
+
     console.log("tester");
   res.send({
     speech:"Please enter a valid incident number",
@@ -21,7 +21,7 @@ if(req.body.queryResult.intent.displayName=='LeaveBalance'){
 
 
 
-}
+
 
 });
 
