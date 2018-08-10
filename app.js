@@ -114,6 +114,7 @@ app.use(bodyParser.json());
        
   ]});
       }else{
+         
           if(req.body.result.fulfillment.speech == "success"){
             res.send({"messages": [
                 {
@@ -164,6 +165,59 @@ app.use(bodyParser.json());
                    
               ]});
             
+          }else{
+          if(req.body.result.fulfillment.speech == "confirm"){
+             
+             
+               res.send({"messages": [
+                {
+                  "displayText": "I am success",
+                  "platform": "google",
+                  "textToSpeech": "Audio response",
+                  "type": "simple_response"
+                },  {
+                  "items": [
+                    {
+                     
+                      "optionInfo": {
+                        "key": "itemOne",
+                        "synonyms": [
+                          "thing one",
+                          "object one"
+                        ]
+                      },
+                      "title": "Item One"
+                    },
+                    {
+                    
+                      "optionInfo": {
+                        "key": "itemTwo",
+                        "synonyms": [
+                          "thing two",
+                          "object two"
+                        ]
+                      },
+                      "title": "Item Two"
+                    }
+                  ],
+                  "platform": "google",
+                  "title": "Title",
+                  "type": "list_card"
+                },  {
+                    "platform": "google",
+                    "suggestions": [
+                      {
+                        "title": "Chip One"
+                      },
+                      {
+                        "title": "Chip Two"
+                      }
+                    ],
+                    "type": "suggestion_chips"
+                  }
+                   
+              ]});
+             }
           }
       }
       }
