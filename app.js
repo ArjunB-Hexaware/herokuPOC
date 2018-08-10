@@ -171,7 +171,7 @@ app.use(bodyParser.json());
              
                res.send({"messages": [
                 {
-                  "displayText": "I am success",
+                  "displayText": "CONFIRM",
                   "platform": "google",
                   "textToSpeech": "Audio response",
                   "type": "simple_response"
