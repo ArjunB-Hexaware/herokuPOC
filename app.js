@@ -11,11 +11,13 @@ app.use(bodyParser.json());
 
 
    app.post('/',function(req,res){
-      console.log('REQUESTTTTT:::'+req.body.result.fulfillment.speech);
+      console.log('REQUESTTTTT:::',req.body);
 
     console.log("tester");
       if(req.body.result.fulfillment.speech == "date"){
-      res.send({"messages": [
+         res.userStorage="count=1";
+      res.send({
+         "messages": [
     {
       "displayText": "Date-time",
       "platform": "google",
