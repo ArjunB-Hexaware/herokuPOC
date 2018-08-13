@@ -66,6 +66,7 @@ app.use(bodyParser.json());
        
   ]});
       }else{
+         console.log("userStorage",req.user.userStorage);
       if(req.body.result.fulfillment.speech == "number"){
       res.send({"messages": [
     {
