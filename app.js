@@ -17,7 +17,7 @@ app.use(bodyParser.json());
       if(req.body.result.fulfillment.speech == "date"){
          res.userStorage="count=1";
       res.send({
-          "payload": {
+          "data": {
             "google": {
               "expectUserResponse": true,
               "richResponse": {
