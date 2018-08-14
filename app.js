@@ -17,54 +17,33 @@ app.use(bodyParser.json());
       if(req.body.result.fulfillment.speech == "date"){
          res.userStorage="count=1";
       res.send({
-         "messages": [
-    {
-      "displayText": "Date-time",
-      "platform": "google",
-      "textToSpeech": "Audio response",
-      "type": "simple_response"
-    },  {
-      "items": [
-        {
-         
-          "optionInfo": {
-            "key": "itemOne",
-            "synonyms": [
-              "thing one",
-              "object one"
-            ]
-          },
-          "title": "Item One"
-        },
-        {
-        
-          "optionInfo": {
-            "key": "itemTwo",
-            "synonyms": [
-              "thing two",
-              "object two"
-            ]
-          },
-          "title": "Item Two"
+          "payload": {
+            "google": {
+              "expectUserResponse": true,
+              "richResponse": {
+                "items": [
+                  {
+                    "simpleResponse": {
+                      "textToSpeech": "Its Oh Great. Nice to know that you like "
+                    }
+                  }
+                ],
+                "suggestions": [
+                  {
+                    "title": "PremierLeague"
+                  },
+                  {
+                    "title": "FA Cup"
+                  },
+                  {
+                    "title": "Champions League"
+                  }
+                ]
+              },
+              "userStorage": "count=10"
+            }
         }
-      ],
-      "platform": "google",
-      "title": "Title",
-      "type": "list_card"
-    },  {
-        "platform": "google",
-        "suggestions": [
-          {
-            "title": "Chip One"
-          },
-          {
-            "title": "Chip Two"
-          }
-        ],
-        "type": "suggestion_chips"
-      }
-       
-  ]});
+      });
       }else{
          console.log("userStorage",req.user);
       if(req.body.result.fulfillment.speech == "number"){
