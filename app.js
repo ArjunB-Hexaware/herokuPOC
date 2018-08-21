@@ -97,7 +97,8 @@ app.use(bodyParser.json());
        
   ]});
       }else{
-         
+               console.log("userStorage", JSON.stringify(req.body));
+         console.log("userstorageValue",req.body.originalRequest.data.user.userStorage)
           if(req.body.result.fulfillment.speech == "success"){
             res.send({"messages": [
                 {
