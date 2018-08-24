@@ -38,11 +38,7 @@ app.use(bodyParser.json());
           {
             "title": "Champions League"
           }
-        ]
-      },
-      "userStorage": "count=10"
-    }
-  },
+        ],
 "contextOut": [
   {
     "name": "leaveBalanceContext",
@@ -50,6 +46,10 @@ app.use(bodyParser.json());
     "parameters": {}
   }
 ]
+      },
+      "userStorage": "count=10"
+    }
+  }
 });
       }else{
          console.log("userStorage", JSON.stringify(req.body));
