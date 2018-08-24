@@ -17,33 +17,40 @@ app.use(bodyParser.json());
       if(req.body.result.fulfillment.speech == "date"){
          res.userStorage="count=1";
       res.send({
-          "data": {
-            "google": {
-              "expectUserResponse": true,
-              "richResponse": {
-                "items": [
-                  {
-                    "simpleResponse": {
-                      "textToSpeech": "Its Oh Great. Nice to know that you like "
-                    }
-                  }
-                ],
-                "suggestions": [
-                  {
-                    "title": "PremierLeague"
-                  },
-                  {
-                    "title": "FA Cup"
-                  },
-                  {
-                    "title": "Champions League"
-                  }
-                ]
-              },
-              "userStorage": "count=10"
+  "data": {
+    "google": {
+      "expectUserResponse": true,
+      "richResponse": {
+        "items": [
+          {
+            "simpleResponse": {
+              "textToSpeech": "Its Oh Great. Nice to know that you like "
             }
-        }
-      });
+          }
+        ],
+        "suggestions": [
+          {
+            "title": "PremierLeague"
+          },
+          {
+            "title": "FA Cup"
+          },
+          {
+            "title": "Champions League"
+          }
+        ]
+      },
+      "userStorage": "count=10"
+    }
+  },
+"contextOut": [
+  {
+    "name": "context name",
+    "lifespan": 5,
+    "parameters": {}
+  }
+]
+});
       }else{
          console.log("userStorage", JSON.stringify(req.body));
          console.log("userstorageValue",req.body.originalRequest.data.user.userStorage)
