@@ -45,7 +45,7 @@ app.use(bodyParser.json());
   },
 "contextOut": [
   {
-    "name": "context name",
+    "name": "leaveBalanceContext",
     "lifespan": 5,
     "parameters": {}
   }
