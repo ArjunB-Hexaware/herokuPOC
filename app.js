@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
     console.log("tester");
       if(req.body.result.fulfillment.speech == "date"){
-         res.userStorage="count=1";
+   /*      res.userStorage="count=1";
       res.send({
   "data": {
     "google": {
@@ -50,7 +50,27 @@ app.use(bodyParser.json());
       "userStorage": "count=10"
     }
   }
-});
+});*/
+            res.send({"messages": [
+    {
+      "displayText": "Number",
+      "platform": "google",
+      "textToSpeech": "Audio response",
+      "type": "simple_response"
+    },{
+        "platform": "google",
+        "suggestions": [
+          {
+            "title": "Chip One"
+          },
+          {
+            "title": "Chip Two"
+          }
+        ],
+        "type": "suggestion_chips"
+      }
+       
+  ]});
       }else{
          console.log("userStorage", JSON.stringify(req.body));
          console.log("userstorageValue",req.body.originalRequest.data.user.userStorage)
