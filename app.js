@@ -51,26 +51,36 @@ app.use(bodyParser.json());
     }
   }
 });*/
-            res.send({"messages": [
+            res.send({
+  "speech":"This is a simple response with suggestion chips",
+  "data": {
+    "google":
     {
-      "displayText": "Number",
-      "platform": "google",
-      "textToSpeech": "Audio response",
-      "type": "simple_response"
-    },{
-        "platform": "google",
-        "suggestions": [
+      "expectUserResponse":true,
+      "richResponse":
+      {
+        "items":
+        [
           {
-            "title": "Chip One"
-          },
-          {
-            "title": "Chip Two"
+            "simpleResponse":
+            {
+              "textToSpeech":"This is a simple response for with suggestion chips"
+            }
           }
         ],
-        "type": "suggestion_chips"
+        "suggestions":
+        [
+          {
+            "title":"Option 1"
+          },
+          {
+            "title":"Option 2"
+          }
+        ]
       }
-       
-  ]});
+    }
+  }
+});
       }else{
          console.log("userStorage", JSON.stringify(req.body));
          console.log("userstorageValue",req.body.originalRequest.data.user.userStorage)
