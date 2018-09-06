@@ -38,14 +38,7 @@ app.use(bodyParser.json());
           {
             "title": "Champions League"
           }
-        ],
-"contextOut": [
-  {
-    "name": "leaveBalanceContext",
-    "lifespan": 5,
-    "parameters": {}
-  }
-]
+        ]
       },
       "userStorage": "count=10"
     }
