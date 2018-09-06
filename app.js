@@ -16,7 +16,7 @@ app.use(bodyParser.json());
     console.log("tester");
       if(req.body.result.fulfillment.speech == "date"){
     res.userStorage="count=1";
-      res.send({
+    /*  res.send({
   "data": {
     "google": {
       "expectUserResponse": true,
@@ -43,7 +43,61 @@ app.use(bodyParser.json());
       "userStorage": "count=10"
     }
   }
+});*/
+         
+         
+         res.send({
+  "data": {
+    "google": {
+      "expectUserResponse": true,
+      "richResponse": {
+        "items": [
+          {
+            "simpleResponse": {
+              "textToSpeech": "123"
+              ,"displayText":"123"
+
+            }
+          },
+          {
+            "basicCard": {
+              "title": "0",
+              "subtitle": "0",
+              "formattedText":"0",
+              "image": {
+                "url": "",
+                "accessibilityText": ""
+              },
+              "buttons": [
+                {
+                  "title": "",
+                  "openUrlAction": {
+                    "url": ""
+                  }
+                }
+              ],
+              "imageDisplayOptions": "CROPPED"
+            }
+          }
+        ],
+        "suggestions": [
+          {
+            "title": "PremierLeague"
+          },
+          {
+            "title": "FA Cup"
+          },
+          {
+            "title": "Champions League"
+          }
+        ]
+      },
+      "userStorage": "count=10"
+    }
+  }
 });
+        
+
            
       }else{
          console.log("userStorage", JSON.stringify(req.body));
