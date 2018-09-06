@@ -98,7 +98,7 @@ app.use(bodyParser.json());
 });*/
          
          res.send({
-  "conversationToken": "",
+  "conversationToken": "[]",
   "expectUserResponse": true,
   "expectedInputs": [
     {
@@ -150,8 +150,7 @@ app.use(bodyParser.json());
         }
       ]
     }
-  ],
-  "userStorage": "{'name':'rajesh'}"
+  ]
 });
         
 
