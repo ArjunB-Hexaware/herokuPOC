@@ -104,12 +104,15 @@ app.use(bodyParser.json());
     "expectedInputs": [
         {
             "inputPrompt": {
-                "initialPrompts": [
-                    {
-                        "textToSpeech": "Alright! Here are a few things you can learn. Which sounds interesting?"
-                    }
-                ],
-                "noInputPrompts": []
+                "richInitialPrompt": {
+                "items": [
+            {
+              "simpleResponse": {
+                "textToSpeech": "List"
+              }
+            }
+          ]
+                }
             },
             "possibleIntents": [
                 {
