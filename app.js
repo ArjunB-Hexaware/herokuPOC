@@ -14,7 +14,7 @@ app.use(bodyParser.json());
       console.log('REQUESTTTTT:::',req.body);
 
     console.log("tester");
-      if(req.body.result.fulfillment.speech == "date"){
+      if(req.body.queryResult.fulfillmentText == "date"){
     res.userStorage="count=1";
     /*  res.send({
   "data": {
