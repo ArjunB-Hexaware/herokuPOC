@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
     console.log("tester");
       if(req.body.queryResult.fulfillmentText == "date"){
-    res.userStorage="count=1";
+    console.log("I am in");
     /*  res.send({
   "data": {
     "google": {
