@@ -97,7 +97,7 @@ app.use(bodyParser.json());
   }
 });*/
          
-         {
+         res.send({
     "conversationToken": "",
     "expectUserResponse": true,
         "userStorage": "{'test':'test2'}",
@@ -175,7 +175,7 @@ app.use(bodyParser.json());
             ]
         }
     ]
-}
+});
         
 
            
