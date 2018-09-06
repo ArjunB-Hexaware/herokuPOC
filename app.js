@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
     console.log("tester");
       if(req.body.result.fulfillment.speech == "date"){
-   /*      res.userStorage="count=1";
+    res.userStorage="count=1";
       res.send({
   "data": {
     "google": {
@@ -50,37 +50,8 @@ app.use(bodyParser.json());
       "userStorage": "count=10"
     }
   }
-});*/
-            res.send({
-  "speech":"This is a simple response with suggestion chips",
-  "data": {
-    "google":
-    {
-      "expectUserResponse":true,
-      "richResponse":
-      {
-        "items":
-        [
-          {
-            "simpleResponse":
-            {
-              "textToSpeech":"This is a simple response for with suggestion chips"
-            }
-          }
-        ],
-        "suggestions":
-        [
-          {
-            "title":"Option 1"
-          },
-          {
-            "title":"Option 2"
-          }
-        ]
-      }
-    }
-  }
 });
+           
       }else{
          console.log("userStorage", JSON.stringify(req.body));
          console.log("userstorageValue",req.body.originalRequest.data.user.userStorage)
