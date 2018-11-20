@@ -10,7 +10,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 app.get('/getLeaveBalance',fuction(req,res){
-res.send({
+        res.send("test");
+/*res.send({
     "HX_ES_BOT_LV_BAL_RES": {
         "EMPLID": "00000",
         "HX_ES_BOT_LBAL_CHD_DOC": [
@@ -40,7 +41,7 @@ res.send({
             }
         ]
     }
-})
+})*/
 });
 
 app.post('/getOptionHolidays',fuction(req,res){
