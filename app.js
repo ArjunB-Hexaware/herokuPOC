@@ -9,7 +9,7 @@ var portC = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-app.get('/getLeaveBalance',fuction(req,res){
+app.get('/getLeaveBalance',function(req,res){
         res.send("test").end();
 /*res.send({
     "HX_ES_BOT_LV_BAL_RES": {
@@ -44,7 +44,7 @@ app.get('/getLeaveBalance',fuction(req,res){
 })*/
 });
 
-app.post('/getOptionHolidays',fuction(req,res){
+app.post('/getOptionalHolidays',function(req,res){
 res.send({
     "Optional Holiday List": {
         "EMPLID": "00000",
