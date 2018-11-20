@@ -41,7 +41,7 @@ res.send({
             }
         ]
     }
-})
+}).end();
 });
 
 app.post('/getOptionalHolidays',function(req,res){
