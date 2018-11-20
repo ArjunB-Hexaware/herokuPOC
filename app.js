@@ -45,7 +45,7 @@ app.get('/getLeaveBalance',fuction(req,res){
 });
 
 app.post('/getOptionHolidays',fuction(req,res){
-res.json({
+res.send({
     "Optional Holiday List": {
         "EMPLID": "00000",
         "COUNTRY": "IND",
