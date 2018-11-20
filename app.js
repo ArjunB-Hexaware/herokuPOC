@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 app.get('/getLeaveBalance',fuction(req,res){
-        res.send("test");
+        res.send("test").end();
 /*res.send({
     "HX_ES_BOT_LV_BAL_RES": {
         "EMPLID": "00000",
