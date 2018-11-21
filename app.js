@@ -66,19 +66,19 @@ res.send({
                 "STATUS": "Pending"
             },
             {
-                "HOLIDAY_DATE": "RAHUL",
-                "HOLIDAY_NAME": "VICE PRESIDENT",
+                "NAME": "RAHUL",
+                "DESIGNATION": "VICE PRESIDENT",
                 "STATUS": "Dispatched"
             },
             {
-                "HOLIDAY_DATE": "Krishna",
-                "HOLIDAY_NAME": "TECHNICAL ARCHITECT",
-                "LEAVE_STATUS": "Closed"
+                "NAME": "Krishna",
+                "DESIGNATION": "TECHNICAL ARCHITECT",
+                "STATUS": "Closed"
             },
             {
-                "HOLIDAY_DATE": "Ram",
-                "HOLIDAY_NAME": "SENIOR CONSULTANT",
-                "LEAVE_STATUS": "Dispatched"
+                "NAME": "Ram",
+                "DESIGNATION": "SENIOR CONSULTANT",
+                "STATUS": "Dispatched"
             },
             
         ]
