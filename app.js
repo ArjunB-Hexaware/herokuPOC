@@ -9,6 +9,13 @@ var portC = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+app.post('/teamsDFPOC',function(req,res){
+res.json({
+"key1":process.env.KEYVAL1
+,"key2":process.env.KEYVAL2
+}).end();
+});
+
 app.get('/TICKETCOUNT',function(req,res){
     
 res.send({
