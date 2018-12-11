@@ -2,4 +2,4 @@ const express = require('express');
 let router = express();
 var chatfw = require("./chatframework.js")
 
-router.post('/teams',botFrameWork.connector.listen());
+router.post('/teamsDFPOC',botFrameWork.connector.listen());
